@@ -13,11 +13,14 @@ namespace pos::domain {
 
 namespace {
 
-// Copy src into fixed-size dst, NUL-padding, and guaranteeing dst[N-1] = '\0'.
+// Copy src into fixed-size dst. dst is zero-initialized first, so short strings
+// get implicit NUL termination. Strings of length N fill the whole field
+// (important for fixed-length fields like passwordHash that are exactly N
+// hex chars — reserving a NUL byte here would silently truncate them).
 template <std::size_t N>
 void copyFixed(char (&dst)[N], const std::string& src) {
     std::memset(dst, 0, N);
-    const std::size_t n = std::min(src.size(), static_cast<std::size_t>(N - 1));
+    const std::size_t n = std::min(src.size(), N);
     std::memcpy(dst, src.data(), n);
 }
 

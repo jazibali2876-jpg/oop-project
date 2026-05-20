@@ -23,13 +23,19 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Generated logs from running the app (the data/ folder itself IS committed
-# so a fresh clone has the seed defaults available — but live logs / receipts
-# created during local runs should NOT be committed).
+# Runtime state from running the app. The text *seed* files (menu.txt,
+# inventory.txt, recipes.txt, tables.txt) are committed so a fresh clone has
+# demo data immediately, but anything mutated at run time — binary records,
+# logs, receipts, settings — must NOT be committed. The app re-seeds any
+# missing file on first run, so users always get a working app.
+dist/data/*.dat
 dist/data/log.txt
+dist/data/settings.txt
 dist/data/receipts/*.txt
 dist/data/receipts/*.pdf.txt
+data/*.dat
 data/log.txt
+data/settings.txt
 data/receipts/*.txt
 data/receipts/*.pdf.txt
 

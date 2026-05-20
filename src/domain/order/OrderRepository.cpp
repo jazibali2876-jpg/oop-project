@@ -15,7 +15,7 @@ namespace {
 template <std::size_t N>
 void copyFixed(char (&dst)[N], const std::string& src) {
     std::memset(dst, 0, N);
-    const auto n = std::min(src.size(), static_cast<std::size_t>(N - 1));
+    const auto n = std::min(src.size(), N);
     std::memcpy(dst, src.data(), n);
 }
 
