@@ -41,7 +41,7 @@ void DrawLogin(pos::ui::AppContext& ctx) {
                              ImGuiWindowFlags_NoMove |
                              ImGuiWindowFlags_NoSavedSettings;
     if (ImGui::Begin("##login", nullptr, flags)) {
-        float boxW = 420.f, boxH = 420.f;
+        float boxW = 460.f, boxH = 520.f;
         float cx = ctx.screenW * 0.5f + shakeX;
         float cy = ctx.screenH * 0.5f;
         ImGui::SetCursorPos(ImVec2(cx - boxW * 0.5f, cy - boxH * 0.5f));
