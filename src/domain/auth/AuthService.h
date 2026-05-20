@@ -30,6 +30,10 @@ public:
     bool seedDefaultAdminIfEmpty(const std::string& username = "admin",
                                  const std::string& password = "admin123");
 
+    // Seeds demo accounts for all 3 roles on first run (admin/cashier/kitchen).
+    // Returns true if any user was created. Idempotent: existing users are skipped.
+    bool seedDemoUsersIfEmpty();
+
 private:
     UserRepository& repo_;
 };

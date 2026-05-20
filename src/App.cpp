@@ -121,7 +121,7 @@ int App::run() {
                                impl_->inventory.seedDefaultRecipesIfEmpty();
     impl_->customers.load();
     impl_->tables.load();      impl_->tables.seedDefaultsIfEmpty();
-    impl_->auth.seedDefaultAdminIfEmpty();
+    impl_->auth.seedDemoUsersIfEmpty();
     impl_->kitchen.rehydrate(impl_->orders.active());
 
     // Platform: window + ImGui backend

@@ -92,7 +92,10 @@ void DrawLogin(pos::ui::AppContext& ctx) {
             }
 
             ImGui::Spacing(); ImGui::Spacing();
-            ImGui::TextDisabled("Tip: default admin is admin / admin123");
+            ImGui::TextDisabled("Demo accounts (created on first run):");
+            ImGui::TextDisabled("  admin    / admin123     - full access");
+            ImGui::TextDisabled("  cashier  / cashier123   - orders, billing, tables");
+            ImGui::TextDisabled("  kitchen  / kitchen123   - kitchen display only");
         }
         ImGui::EndChild();
     }

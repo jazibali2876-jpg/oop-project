@@ -58,4 +58,18 @@ bool AuthService::seedDefaultAdminIfEmpty(const std::string& username,
     return true;
 }
 
+bool AuthService::seedDemoUsersIfEmpty() {
+    bool anyCreated = false;
+    auto tryCreate = [&](Role role, const std::string& u, const std::string& p,
+                         const std::string& full) {
+        if (repo_.findByUsername(u).has_value()) return;
+        registerUser(role, u, p, full);
+        anyCreated = true;
+    };
+    tryCreate(Role::Admin,   "admin",   "admin123",   "Default Admin");
+    tryCreate(Role::Cashier, "cashier", "cashier123", "Demo Cashier");
+    tryCreate(Role::Kitchen, "kitchen", "kitchen123", "Demo Kitchen Staff");
+    return anyCreated;
+}
+
 } // namespace pos::domain
