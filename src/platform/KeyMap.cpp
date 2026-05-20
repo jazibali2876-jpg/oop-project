@@ -1,0 +1,109 @@
+#include "platform/KeyMap.h"
+
+namespace pos::platform {
+
+ImGuiKey translateKey(sf::Keyboard::Key k) {
+    using K = sf::Keyboard::Key;
+    switch (k) {
+        case K::Tab:          return ImGuiKey_Tab;
+        case K::Left:         return ImGuiKey_LeftArrow;
+        case K::Right:        return ImGuiKey_RightArrow;
+        case K::Up:           return ImGuiKey_UpArrow;
+        case K::Down:         return ImGuiKey_DownArrow;
+        case K::PageUp:       return ImGuiKey_PageUp;
+        case K::PageDown:     return ImGuiKey_PageDown;
+        case K::Home:         return ImGuiKey_Home;
+        case K::End:          return ImGuiKey_End;
+        case K::Insert:       return ImGuiKey_Insert;
+        case K::Delete:       return ImGuiKey_Delete;
+        case K::Backspace:    return ImGuiKey_Backspace;
+        case K::Space:        return ImGuiKey_Space;
+        case K::Enter:        return ImGuiKey_Enter;
+        case K::Escape:       return ImGuiKey_Escape;
+        case K::Apostrophe:   return ImGuiKey_Apostrophe;
+        case K::Comma:        return ImGuiKey_Comma;
+        case K::Hyphen:       return ImGuiKey_Minus;
+        case K::Period:       return ImGuiKey_Period;
+        case K::Slash:        return ImGuiKey_Slash;
+        case K::Semicolon:    return ImGuiKey_Semicolon;
+        case K::Equal:        return ImGuiKey_Equal;
+        case K::LBracket:     return ImGuiKey_LeftBracket;
+        case K::Backslash:    return ImGuiKey_Backslash;
+        case K::RBracket:     return ImGuiKey_RightBracket;
+        case K::Grave:        return ImGuiKey_GraveAccent;
+        case K::LControl:     return ImGuiKey_LeftCtrl;
+        case K::LShift:       return ImGuiKey_LeftShift;
+        case K::LAlt:         return ImGuiKey_LeftAlt;
+        case K::LSystem:      return ImGuiKey_LeftSuper;
+        case K::RControl:     return ImGuiKey_RightCtrl;
+        case K::RShift:       return ImGuiKey_RightShift;
+        case K::RAlt:         return ImGuiKey_RightAlt;
+        case K::RSystem:      return ImGuiKey_RightSuper;
+        case K::Menu:         return ImGuiKey_Menu;
+        case K::Num0: return ImGuiKey_0;
+        case K::Num1: return ImGuiKey_1;
+        case K::Num2: return ImGuiKey_2;
+        case K::Num3: return ImGuiKey_3;
+        case K::Num4: return ImGuiKey_4;
+        case K::Num5: return ImGuiKey_5;
+        case K::Num6: return ImGuiKey_6;
+        case K::Num7: return ImGuiKey_7;
+        case K::Num8: return ImGuiKey_8;
+        case K::Num9: return ImGuiKey_9;
+        case K::A: return ImGuiKey_A;
+        case K::B: return ImGuiKey_B;
+        case K::C: return ImGuiKey_C;
+        case K::D: return ImGuiKey_D;
+        case K::E: return ImGuiKey_E;
+        case K::F: return ImGuiKey_F;
+        case K::G: return ImGuiKey_G;
+        case K::H: return ImGuiKey_H;
+        case K::I: return ImGuiKey_I;
+        case K::J: return ImGuiKey_J;
+        case K::K: return ImGuiKey_K;
+        case K::L: return ImGuiKey_L;
+        case K::M: return ImGuiKey_M;
+        case K::N: return ImGuiKey_N;
+        case K::O: return ImGuiKey_O;
+        case K::P: return ImGuiKey_P;
+        case K::Q: return ImGuiKey_Q;
+        case K::R: return ImGuiKey_R;
+        case K::S: return ImGuiKey_S;
+        case K::T: return ImGuiKey_T;
+        case K::U: return ImGuiKey_U;
+        case K::V: return ImGuiKey_V;
+        case K::W: return ImGuiKey_W;
+        case K::X: return ImGuiKey_X;
+        case K::Y: return ImGuiKey_Y;
+        case K::Z: return ImGuiKey_Z;
+        case K::F1:  return ImGuiKey_F1;
+        case K::F2:  return ImGuiKey_F2;
+        case K::F3:  return ImGuiKey_F3;
+        case K::F4:  return ImGuiKey_F4;
+        case K::F5:  return ImGuiKey_F5;
+        case K::F6:  return ImGuiKey_F6;
+        case K::F7:  return ImGuiKey_F7;
+        case K::F8:  return ImGuiKey_F8;
+        case K::F9:  return ImGuiKey_F9;
+        case K::F10: return ImGuiKey_F10;
+        case K::F11: return ImGuiKey_F11;
+        case K::F12: return ImGuiKey_F12;
+        case K::Numpad0: return ImGuiKey_Keypad0;
+        case K::Numpad1: return ImGuiKey_Keypad1;
+        case K::Numpad2: return ImGuiKey_Keypad2;
+        case K::Numpad3: return ImGuiKey_Keypad3;
+        case K::Numpad4: return ImGuiKey_Keypad4;
+        case K::Numpad5: return ImGuiKey_Keypad5;
+        case K::Numpad6: return ImGuiKey_Keypad6;
+        case K::Numpad7: return ImGuiKey_Keypad7;
+        case K::Numpad8: return ImGuiKey_Keypad8;
+        case K::Numpad9: return ImGuiKey_Keypad9;
+        case K::Add:      return ImGuiKey_KeypadAdd;
+        case K::Subtract: return ImGuiKey_KeypadSubtract;
+        case K::Multiply: return ImGuiKey_KeypadMultiply;
+        case K::Divide:   return ImGuiKey_KeypadDivide;
+        default: return ImGuiKey_None;
+    }
+}
+
+} // namespace pos::platform

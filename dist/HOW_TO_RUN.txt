@@ -1,0 +1,35 @@
+Smart Restaurant POS — How to run
+==================================
+
+Open this folder and double-click `smart_pos.exe`.
+
+That's it. No installation, no configuration. The first launch will create the
+`data/` files (menu, inventory, tables, default admin user, etc.) automatically.
+
+Default login on a fresh install:
+    Username:  admin
+    Password:  admin123
+
+Requirements:
+- 64-bit Windows 10 or 11
+- A GPU that supports OpenGL 3.3 or higher (every modern PC qualifies)
+
+Everything required to run the app is in this folder:
+- smart_pos.exe            (the application)
+- sfml-graphics-3.dll      | SFML 3.1.0 runtime
+- sfml-window-3.dll        |
+- sfml-system-3.dll        |
+- sfml-audio-3.dll         |
+- libgcc_s_seh-1.dll       | MinGW-w64 GCC runtime
+- libstdc++-6.dll          |
+- libwinpthread-1.dll      |
+- assets/                  (fonts and images)
+- data/                    (text + binary data, created on first run)
+
+If you ever want to reset to a blank install, delete the entire `data/` folder.
+The app will recreate it from defaults the next time it starts.
+
+Troubleshooting:
+- "The application was unable to start correctly (0xc000007b)":
+  you may be on a 32-bit version of Windows. This build is 64-bit only.
+- Window opens then closes immediately: open `data/log.txt` for the error.

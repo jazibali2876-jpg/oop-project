@@ -1,0 +1,11 @@
+# id|seats|status|reservedForCustomerId|reservedAtEpoch
+1|2|Free|0|0
+2|4|Free|0|0
+3|4|Free|0|0
+4|6|Free|0|0
+5|2|Free|0|0
+6|4|Free|0|0
+7|2|Free|0|0
+8|8|Free|0|0
+9|4|Free|0|0
+10|4|Free|0|0

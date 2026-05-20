@@ -1,0 +1,6 @@
+# id|name|unit|stock|reorderThreshold|costCentsPerUnit
+1|Beef Patty|pcs|48|10|250
+2|Burger Bun|pcs|60|15|45
+3|Cheese Slice|pcs|72|20|30
+4|Lettuce|g|800|200|2
+5|Espresso Beans|g|1500|400|8

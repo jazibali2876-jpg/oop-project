@@ -1,0 +1,6 @@
+# id|name|category|priceCents|imagePath|available
+1|Classic Cheeseburger|FastFood|799|burger.png|1
+2|Grilled Chicken BBQ|BBQ|1299|bbq_chicken.png|1
+3|Sweet & Sour Chicken|Chinese|1099|sweet_sour.png|1
+4|Iced Latte|Drinks|449|iced_latte.png|1
+5|Chocolate Lava Cake|Desserts|599|lava_cake.png|1

@@ -1,0 +1,3 @@
+# menuItemId|ingredientId:qty,ingredientId:qty,...
+1|1:1,2:1,3:1,4:30
+4|5:18

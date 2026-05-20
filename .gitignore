@@ -1,0 +1,41 @@
+# --- Build-time bulk (toolchain, library SDKs, intermediates) -----------
+# These are exactly the build-time-only directories. Anyone building from
+# source has to supply them themselves; see README.md.
+SFML-3.1.0/
+imgui-master/
+mingw64/
+third_party/
+build/
+
+# Compile artifacts
+*.o
+*.obj
+*.a.tmp
+*.dat.tmp
+*.txt.tmp
+
+# Editor + OS noise
+.vs/
+.vscode/
+.idea/
+.cache/
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Generated logs from running the app (the data/ folder itself IS committed
+# so a fresh clone has the seed defaults available — but live logs / receipts
+# created during local runs should NOT be committed).
+dist/data/log.txt
+dist/data/receipts/*.txt
+dist/data/receipts/*.pdf.txt
+data/log.txt
+data/receipts/*.txt
+data/receipts/*.pdf.txt
+
+# Python build-time tooling
+__pycache__/
+*.pyc
+
+# IMPORTANT: dist/, *.exe, and *.dll are NOT ignored. The runnable
+# self-contained bundle MUST be committed (per project brief).
